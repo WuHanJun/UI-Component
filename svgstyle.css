@@ -1,0 +1,9 @@
+.svg {
+    background: rgb(31, 187, 166)
+}
+.svg .x-labels {
+    text-anchor: middle; /*平均分布，中间对齐*/
+}
+.svg .y-labels {
+    text-anchor: end; /*往左移但是是右端对齐*/
+}
