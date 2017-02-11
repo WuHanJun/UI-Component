@@ -332,6 +332,7 @@ Signika serif;
     margin-top: 16px;
     color: #fff;
     font-size: 24px;
+    -webkit-appearance: button;
 }
 #time-table {
     color: #fff;
