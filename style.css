@@ -183,6 +183,7 @@ Signika serif;
     border: none;
     border-radius: 3px;
     margin-top: 15px;
+    -webkit-appearance: button;
 }
 #person-message .header {
     width: 279px;
@@ -190,7 +191,6 @@ Signika serif;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
     background: #fff;
-    padding-top: 1px; /*===========================================用于组织外边距合并，等会可以删除======================================*/
 }
 #person-message .header p:nth-child(1) {
     font-size: 24px;
