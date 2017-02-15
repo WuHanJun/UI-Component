@@ -313,20 +313,26 @@ Signika serif;
 #time-table .main ul {
     margin-top: -6px;
     text-align: start;
+    position: relative;
 }
 #time-table .main li {
     font-size: 11px;
     font-family: "ProximaNova", serif;
-    margin-left: 64px;
-    margin-bottom: 10px;
-    display: inline-block;
-
 }
 #time-table .main li:first-child {
-    margin-left: 41px;
+    position: absolute;
+    left: 36px;
+    top: 6px;
+}
+#time-table .main li:nth-child(2) {
+    position: absolute;
+    right: 132px;
+    top: 6px;
 }
 #time-table .main li:last-child {
-    margin-left: 68px;
+    position: absolute;
+    right: 40px;
+    top: 6px;
 }
 #mailbox .header {
     width: 280px;
