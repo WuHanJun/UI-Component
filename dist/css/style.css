@@ -442,15 +442,9 @@ Signika serif;
     width: 80px;
     height: 160px;
     position: absolute;
-    //overflow: hidden;
-}
-
-#degree-completion .main .wrapper:not(*:root) {
-    width: 80px;
-    height: 160px;
-    position: absolute;
     overflow: hidden;
 }
+
 #degree-completion .main .left-wrap {
     left: 0;
 }
