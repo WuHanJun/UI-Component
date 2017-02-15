@@ -310,11 +310,14 @@ Signika serif;
     margin-top: 5px;
     letter-spacing: 3px;
 }
+#time-table .main ul {
+    margin-top: -4px;
+}
 #time-table .main li {
-    //float: left;
     font-size: 11px;
     font-family: "ProximaNova", serif;
     margin-left: 64px;
+    margin-bottom: 10px;
     display: inline-block;
 }
 #time-table .main li:first-child {
