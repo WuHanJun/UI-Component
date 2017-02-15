@@ -3,13 +3,15 @@
 <head>
     <meta charset="utf-8"/>
     <title>UI-Component</title>
+    <link href="./dist/css/video-js.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./font/iconfont.css">
-    <link rel="stylesheet" href="./style.css"/>
+    <link rel="stylesheet" href="./dist/css/style.css"/>
+    <script src="./dist/js/video.min.js"></script>
 </head>
 <body>
     <div id="layout" class="clearfix">
         <div id="left">
-            <div id="play">
+           <!-- <div id="play">
                 <div class="main">
                     <div class="circle">
                         <span class="trilateral"></span>
@@ -18,6 +20,7 @@
                 <div class="footer clearfix">
                     <div class="left">
                        <span class="iconfont icon-stop"></span>
+
                     </div>
                     <div class="right">
                         <ul class="pregress">
@@ -28,7 +31,16 @@
                         <span class="iconfont icon-yinliang"></span>
                     </div>
                 </div>
-            </div>
+            </div>-->
+            <video id="example_video_1" class="video-js vjs-default-skin vjs-big-play-centered"
+                   controls preload="auto" width="370" height="250"
+                   poster="./image/cover.png"
+                   data-setup='{"example_option":true}'>
+                <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4" />
+                <source src="http://video-js.zencoder.com/oceans-clip.webm" type="video/webm" />
+                <source src="http://video-js.zencoder.com/oceans-clip.ogv" type="video/ogg" />
+                <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+            </video>
             <div id="revenue-message">
                 <div class="polyline">
                     <svg  version="1.2" width = "370" height="290" class="svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
@@ -291,7 +303,7 @@
             <div id="event-record">
                 <div class="header">
                     <span class="iconfont icon-wodexuqiuben01"></span>
-                    <p class="time">January 25, 2013</p>
+                    <p class="date"></p>
                 </div>
 
                 <div class="main">
@@ -322,7 +334,7 @@
                     </div>
                 </div>
                 <div class="main">
-                    <ul class="clearfix">
+                    <!--<ul class="clearfix">
                         <li>
                             <span>05</span>
                             <span class="iconfont icon-weibiaoti9-copy"></span>
@@ -337,11 +349,58 @@
                             <span>19</span>
                             <p>SEC</p>
                         </li>
+                    </ul>-->
+                    <div class="time"></div>
+                    <ul>
+                        <li>HOUR</li>
+                        <li>MIN</li>
+                        <li>SEC</li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.js"></script>
+    <script>
+            var timeEle = $('.time'),
+                    dateEle = $('.date');
+            var time = setInterval(function () {
+                var now = new Date(),
+                        hour = now.getHours(),
+                        min = now.getMinutes(),
+                        sec = now.getSeconds(),
+                        hourTemp, minTemp, secTemp;
+                hour < 10 ? hourTemp = '0' + hour : hourTemp = hour;
+                min < 10 ? minTemp = '0' + min : minTemp = min;
+                sec < 10 ? secTemp = '0' + sec : secTemp = sec;
+                timeEle.html(hourTemp + ':' + minTemp + ':' + secTemp);
+            }, 1000);
 
- </body>
- </html>
+            function getDate() {
+                var date = new Date(),
+                        year = date.getFullYear(),
+                        month = date.getMonth(),
+                        today = date.getDate(),
+                        monthTemp, todayTemp;
+                today < 10 ? todayTemp = '0' + today : todayTemp = today;
+                var monthArr = new Array("January ", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+                dateEle.html(monthArr[month] + ' ' + todayTemp + ', ' + year);
+            }
+
+            getDate();
+            var time2 = setInterval(getDate, 86400000);
+
+
+
+            var myPlayer = videojs('example_video_1');
+
+            videojs("example_video_1").ready(function(){
+                window.VIDEOJS_NO_BASE_THEME = false;
+                var myPlayer = this;
+
+                // EXAMPLE: Start playing the video.
+                // myPlayer.play();
+
+            });
+</script>
+</body>

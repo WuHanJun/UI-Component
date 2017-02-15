@@ -2,27 +2,7 @@ html, body {
     height: 100%;
     font-family:  "Verdana", serif;
 }
-#layout {
-    width: 1140px;
-    margin: 0 auto;
-    padding-bottom: 80px;
-}
-#left,
-#right,
-#middle{
-    float: left;
-    margin-left: 50px;
-}
-#revenue-message,
-#degree-completion,
-#mailbox,
-#time-table,
-#event-record,
-#person-message,
-#play,
-#login {
-    margin-top: 50px;
-}
+
 *{
     margin: 0;
     padding: 0;
@@ -43,92 +23,47 @@ body {
     content: '';
     clear: both;
 }
-#play .main {
-    width: 370px;
-    height: 200px;
-    background-color: rgba(0, 175, 209, 1);
-    padding: 1px;
+#layout {
+    width: 1140px;
+    margin: 0 auto;
+    padding-bottom: 80px;
+}
+#left,
+#right,
+#middle{
+    float: left;
+    margin-left: 50px;
+    overflow: hidden;
+}
+#revenue-message,
+#degree-completion,
+#mailbox,
+#time-table,
+#event-record,
+#person-message,
+#example_video_1,
+#login {
+    margin-top: 50px;
+}
+#example_video_1 {
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
 }
-#play .circle {
-    width: 60px;
+.video-js .vjs-big-play-button {
     height: 60px;
+    line-height: 60px;
+    width: 60px;
     border-radius: 30px;
-    border: 4px solid rgba(77,199,223,1);
-    background-color:rgba(0, 175, 209, 1);
-    margin: 66px auto;
-
+    margin-top: -30px;
+    margin-left: -30px;
+    background: rgba(0, 175, 209, 1);
+    border: 4px solid rgba(77,199,223,1)
 }
-#play .circle .trilateral {
-    margin: 21px 21px;
-    width: 0;
-    height: 0;
-    display: block;
-    border-top: 7px solid transparent;
-    border-left: 14px solid rgba(221, 240, 246, 1);
-    border-bottom: 7px solid transparent;
+.vjs-control-text {
+    margin-top: 4px;
 }
-#play .footer .left {
-    width: 50px;
-    height: 50px;
-    padding: 15px 0;
-    background-color: rgba(32, 34, 38, 1);
-    float: left;
-    text-align: center;
-    border-bottom-left-radius: 4px;
-}
-#play .footer .right {
-    width: 320px;
-    height: 50px;
-    background-color: rgba(29, 48, 55, 1);
-    float: left;
-    border-bottom-right-radius: 4px;
-    position: relative;
-    padding: 15px 15px 15px 288px;
-}
-#play .footer .icon-stop {
-    font-size: 14px;
-    color: #fff;
-
-}
-/* #play-wrap .progress {
-     margin: 22px 50px 20px;
- }*/
-#play .progress-bar {
-    position: absolute;
-    top: 20px;
-    left: 38px;
-    width: 230px;
-    height: 8px;
-    border-radius: 10px;
-    background: #000;
-    border: 1px solid;
-}
-#play .finished-progress-bar {
-    position: absolute;
-    z-index: 2;
-    left: 18px;
-    top: 20px;
-    width: 80px;
-    height: 8px;
-    border-radius: 5px;
-    background: rgba(94, 109, 129, 1);
-}
-#play .progress-point {
-    position: absolute;
-    z-index: 3;
-    top: 20px;
-    left: 75px;
-    width: 8px;
-    height: 8px;
-    border-radius: 5px;
-    background: rgba(255, 255, 255, 1);
-    display: table;
-}
-#play .right .icon-yinliang {
-    font-size: 14px;
-    color: #fff;
+.vjs-big-play-button:before {
+    margin-top: -3px;
 }
 #login .account input,
 #login .password input{
@@ -271,7 +206,7 @@ Signika serif;
     vertical-align: middle;
     margin: 0 20px;
 }
-#event-record .header .time{
+#event-record .header .date{
     font-size: 18px;
     color: #fff;
     display: inline-block;
@@ -365,32 +300,24 @@ Signika serif;
     height: 88px;
     width: 280px;
     background: rgba(31, 187, 166, 1);
-    padding: 9px 0 0 23px;
     text-align: center;
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
+    overflow: hidden;
+}
+#time-table .main .time {
+    font-size: 48px;
+    margin-top: 5px;
 }
 #time-table .main li {
     float: left;
-    position: relative;
     margin-right: 28px;
-}
-#time-table .main li:nth-child(3) {
-    margin-right: 0;
-}
-#time-table .main li span:nth-child(1) {
-    font-size: 48px;
-}
-#time-table .main li span:nth-child(2) {
-    font-size: 22px;
-    position: absolute;
-    top: 18px;
-    left: 64px;
-}
-#time-table .main li p {
     font-size: 11px;
     font-family: "ProximaNova", serif;
-    text-align: center;
+    margin-left: 37px;
+}
+#time-table .main li:first-child {
+    margin-left: 47px;
 }
 #mailbox .header {
     width: 280px;
@@ -739,3 +666,4 @@ Signika serif;
     color: rgb(31, 187, 166);
     font-size: 30px;
 }
+
