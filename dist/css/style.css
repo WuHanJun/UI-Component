@@ -304,6 +304,7 @@ Signika serif;
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
     overflow: hidden;
+    position: relative;
 }
 #time-table .main .time {
     font-size: 48px;
@@ -311,28 +312,25 @@ Signika serif;
     letter-spacing: 3px;
 }
 #time-table .main ul {
-    margin-top: -6px;
+    margin-top: px;
     text-align: start;
-    position: relative;
 }
 #time-table .main li {
     font-size: 11px;
     font-family: "ProximaNova", serif;
+    top: 61px;
 }
 #time-table .main li:first-child {
     position: absolute;
     left: 36px;
-    top: 6px;
 }
 #time-table .main li:nth-child(2) {
     position: absolute;
     right: 131px;
-    top: 6px;
 }
 #time-table .main li:last-child {
     position: absolute;
     right: 40px;
-    top: 6px;
 }
 #mailbox .header {
     width: 280px;
@@ -444,7 +442,14 @@ Signika serif;
     width: 80px;
     height: 160px;
     position: absolute;
-    overflow: auto;
+    //overflow: hidden;
+}
+
+#degree-completion .main .wrapper:not(*:root) {
+    width: 80px;
+    height: 160px;
+    position: absolute;
+    overflow: hidden;
 }
 #degree-completion .main .left-wrap {
     left: 0;
