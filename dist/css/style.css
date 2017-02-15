@@ -308,6 +308,7 @@ Signika serif;
 #time-table .main .time {
     font-size: 48px;
     margin-top: 5px;
+    letter-spacing: 3px;
 }
 #time-table .main li {
     float: left;
