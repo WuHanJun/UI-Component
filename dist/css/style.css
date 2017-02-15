@@ -311,10 +311,9 @@ Signika serif;
 }
 #time-table .main li {
     float: left;
-    margin-right: 28px;
     font-size: 11px;
     font-family: "ProximaNova", serif;
-    margin-left: 37px;
+    margin-left: 64px;
 }
 #time-table .main li:first-child {
     margin-left: 47px;
