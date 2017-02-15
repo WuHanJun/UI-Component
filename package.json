@@ -1,0 +1,24 @@
+{
+  "name": "ui-component",
+  "version": "1.0.0",
+  "description": "一套漂亮的UI组件。 [预览地址](https://wuhanjun.github.io/UI-Component/index.html)",
+  "main": "main.js",
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "video.js": "^5.16.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WuHanJun/UI-Component.git"
+  },
+  "author": "wuhanjun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WuHanJun/UI-Component/issues"
+  },
+  "homepage": "https://github.com/WuHanJun/UI-Component#readme"
+}

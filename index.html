@@ -3,35 +3,11 @@
 <head>
     <meta charset="utf-8"/>
     <title>UI-Component</title>
-    <link href="./dist/css/video-js.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./font/iconfont.css">
-    <link rel="stylesheet" href="./dist/css/style.css"/>
-    <script src="./dist/js/video.min.js"></script>
 </head>
 <body>
     <div id="layout" class="clearfix">
         <div id="left">
-           <!-- <div id="play">
-                <div class="main">
-                    <div class="circle">
-                        <span class="trilateral"></span>
-                    </div>
-                </div>
-                <div class="footer clearfix">
-                    <div class="left">
-                       <span class="iconfont icon-stop"></span>
 
-                    </div>
-                    <div class="right">
-                        <ul class="pregress">
-                            <li class="progress-bar"></li>
-                            <li class="finished-progress-bar"></li>
-                            <li class="progress-point"></li>
-                        </ul>
-                        <span class="iconfont icon-yinliang"></span>
-                    </div>
-                </div>
-            </div>-->
             <video id="example_video_1" class="video-js vjs-default-skin vjs-big-play-centered"
                    controls preload="auto" width="370" height="250"
                    poster="./image/cover.png"
@@ -334,22 +310,6 @@
                     </div>
                 </div>
                 <div class="main">
-                    <!--<ul class="clearfix">
-                        <li>
-                            <span>05</span>
-                            <span class="iconfont icon-weibiaoti9-copy"></span>
-                            <p>HOUR</p>
-                        </li>
-                        <li>
-                            <span>24</span>
-                            <span class="iconfont icon-weibiaoti9-copy"></span>
-                            <p>MIN</p>
-                        </li>
-                        <li>
-                            <span>19</span>
-                            <p>SEC</p>
-                        </li>
-                    </ul>-->
                     <div class="time"></div>
                     <ul class="clearfix">
                         <li>HOUR</li>
@@ -361,46 +321,6 @@
         </div>
     </div>
     <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.js"></script>
-    <script>
-            var timeEle = $('.time'),
-                    dateEle = $('.date');
-            var time = setInterval(function () {
-                var now = new Date(),
-                        hour = now.getHours(),
-                        min = now.getMinutes(),
-                        sec = now.getSeconds(),
-                        hourTemp, minTemp, secTemp;
-                hour < 10 ? hourTemp = '0' + hour : hourTemp = hour;
-                min < 10 ? minTemp = '0' + min : minTemp = min;
-                sec < 10 ? secTemp = '0' + sec : secTemp = sec;
-                timeEle.html(hourTemp + ':' + minTemp + ':' + secTemp);
-            }, 1000);
+    <script src="bundle.js"></script>
 
-            function getDate() {
-                var date = new Date(),
-                        year = date.getFullYear(),
-                        month = date.getMonth(),
-                        today = date.getDate(),
-                        monthTemp, todayTemp;
-                today < 10 ? todayTemp = '0' + today : todayTemp = today;
-                var monthArr = new Array("January ", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
-                dateEle.html(monthArr[month] + ' ' + todayTemp + ', ' + year);
-            }
-
-            getDate();
-            var time2 = setInterval(getDate, 86400000);
-
-
-
-            var myPlayer = videojs('example_video_1');
-
-            videojs("example_video_1").ready(function(){
-                window.VIDEOJS_NO_BASE_THEME = false;
-                var myPlayer = this;
-
-                // EXAMPLE: Start playing the video.
-                // myPlayer.play();
-
-            });
-</script>
 </body>
