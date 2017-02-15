@@ -311,13 +311,14 @@ Signika serif;
     letter-spacing: 3px;
 }
 #time-table .main li {
-    float: left;
+    //float: left;
     font-size: 11px;
     font-family: "ProximaNova", serif;
     margin-left: 64px;
+    display: inline-block;
 }
 #time-table .main li:first-child {
-    margin-left: 47px;
+    margin-left: 4px;
 }
 #mailbox .header {
     width: 280px;
