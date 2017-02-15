@@ -326,7 +326,7 @@ Signika serif;
 }
 #time-table .main li:nth-child(2) {
     position: absolute;
-    right: 132px;
+    right: 131px;
     top: 6px;
 }
 #time-table .main li:last-child {
@@ -444,7 +444,7 @@ Signika serif;
     width: 80px;
     height: 160px;
     position: absolute;
-    overflow: hidden;
+    overflow: auto;
 }
 #degree-completion .main .left-wrap {
     left: 0;
