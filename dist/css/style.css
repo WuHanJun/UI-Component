@@ -312,6 +312,7 @@ Signika serif;
 }
 #time-table .main ul {
     margin-top: -6px;
+    text-align: start;
 }
 #time-table .main li {
     font-size: 11px;
@@ -319,9 +320,13 @@ Signika serif;
     margin-left: 64px;
     margin-bottom: 10px;
     display: inline-block;
+
 }
 #time-table .main li:first-child {
-    margin-left: 4px;
+    margin-left: 41px;
+}
+#time-table .main li:last-child {
+    margin-left: 68px;
 }
 #mailbox .header {
     width: 280px;
