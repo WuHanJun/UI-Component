@@ -312,7 +312,6 @@ Signika serif;
     letter-spacing: 3px;
 }
 #time-table .main ul {
-    margin-top: px;
     text-align: start;
 }
 #time-table .main li {
@@ -322,7 +321,7 @@ Signika serif;
 }
 #time-table .main li:first-child {
     position: absolute;
-    left: 36px;
+    left: 46px;
 }
 #time-table .main li:nth-child(2) {
     position: absolute;
@@ -330,7 +329,7 @@ Signika serif;
 }
 #time-table .main li:last-child {
     position: absolute;
-    right: 40px;
+    right: 46px;
 }
 #mailbox .header {
     width: 280px;
